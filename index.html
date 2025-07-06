@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🎉 Fun Quiz for 5 Players 🎉</h1>
+
+    <div id="start-screen">
+      <p>Enter player names:</p>
+      <div id="player-inputs">
+        <input type="text" placeholder="Player 1">
+        <input type="text" placeholder="Player 2">
+        <input type="text" placeholder="Player 3">
+        <input type="text" placeholder="Player 4">
+        <input type="text" placeholder="Player 5">
+      </div>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" style="display: none;">
+      <div id="question-box">
+        <h2 id="question-text"></h2>
+        <div id="options-container"></div>
+        <input type="text" id="short-answer" style="display: none">
+        <div id="player-challenge" style="display: none">
+          <p>Let the group vote! Click if the challenge was successful:</p>
+          <button onclick="voteSuccess(true)">✅ Yes</button>
+          <button onclick="voteSuccess(false)">❌ No</button>
+        </div>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <div id="result-screen" style="display: none;">
+      <h2>🏆 Final Scores 🏆</h2>
+      <ul id="score-list"></ul>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
